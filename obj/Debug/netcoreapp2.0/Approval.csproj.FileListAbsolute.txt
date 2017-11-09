@@ -1,0 +1,10 @@
+D:\Source\Visual Studio Code\Approval\bin\Debug\netcoreapp2.0\Approval.deps.json
+D:\Source\Visual Studio Code\Approval\bin\Debug\netcoreapp2.0\Approval.runtimeconfig.json
+D:\Source\Visual Studio Code\Approval\bin\Debug\netcoreapp2.0\Approval.runtimeconfig.dev.json
+D:\Source\Visual Studio Code\Approval\bin\Debug\netcoreapp2.0\Approval.dll
+D:\Source\Visual Studio Code\Approval\bin\Debug\netcoreapp2.0\Approval.pdb
+D:\Source\Visual Studio Code\Approval\obj\Debug\netcoreapp2.0\Approval.csproj.CoreCompileInputs.cache
+D:\Source\Visual Studio Code\Approval\obj\Debug\netcoreapp2.0\Approval.AssemblyInfoInputs.cache
+D:\Source\Visual Studio Code\Approval\obj\Debug\netcoreapp2.0\Approval.AssemblyInfo.cs
+D:\Source\Visual Studio Code\Approval\obj\Debug\netcoreapp2.0\Approval.dll
+D:\Source\Visual Studio Code\Approval\obj\Debug\netcoreapp2.0\Approval.pdb

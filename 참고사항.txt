@@ -1,0 +1,12 @@
+-폴더구조-
+
+/Views
+-/Approval
+--/Summary
+--/Write
+---/1(품의서)
+---/2(휴가신청서)
+---/3(지출결의서)
+--/Refer
+--/Working
+--/Complete

@@ -1,0 +1,9 @@
+// Position & Sizing
+#wrap {
+    margin: 0 auto;
+    width: 1080px;
+    min-height: 800px;
+    border-left: $border;
+    border-right: $border;
+    background-color: pink;
+}
