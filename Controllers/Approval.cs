@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using Approval.Models;
+using Approval.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Approval.Controllers
@@ -19,10 +22,18 @@ namespace Approval.Controllers
             }
             else 
             {
-                selector = string.Format("Write/{0}", "01");
+                selector = string.Format("Write/{0}", "WD001");
             }
 
             return View(selector);
+        }
+
+        public IActionResult GetEmployees()
+        {
+            EmployeeService service = new EmployeeService();
+            List<Employee> listEmp = service.GetEmployees();
+
+            return View("Working/List", listEmp);
         }
     }
 }
