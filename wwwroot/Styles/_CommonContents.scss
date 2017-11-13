@@ -1,0 +1,27 @@
+// Views/Approval/Write
+.preforms {
+    margin: auto;
+    width: 90%;
+    border-top: $border;
+    border-bottom: $border;
+    border-collapse: collapse;
+    th {
+        padding: 5px 0;
+        background-color: #f5f5f5;
+        // border: $border;
+        border-bottom: $border;
+    }
+    td:nth-child(1) {
+        width: 40px;
+        text-align: center;
+    }
+    td {
+        padding: 5px 0;
+        text-align: center;
+        // border: $border;
+        border-bottom: $border;
+    }
+    tr:hover {
+        background-color: #f7f7f7;
+    }
+}

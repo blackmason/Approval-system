@@ -31,5 +31,10 @@
 }
 .container {
     padding: 10px;
-    border: $border;
+    min-height: 800px;
+    // border: $border;
+}
+.footer {
+    height: 200px;
+    background-color: #566270;
 }

@@ -12539,11 +12539,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Source\\Visual Studio Code\\Approval\\Approval.csproj",
+      "projectUniqueName": "D:\\Source\\Visual Studio Code\\Approval\\Approval.csproj",
       "projectName": "Approval",
-      "projectPath": "d:\\Source\\Visual Studio Code\\Approval\\Approval.csproj",
+      "projectPath": "D:\\Source\\Visual Studio Code\\Approval\\Approval.csproj",
       "packagesPath": "C:\\Users\\Peakpanda\\.nuget\\packages\\",
-      "outputPath": "d:\\Source\\Visual Studio Code\\Approval\\obj\\",
+      "outputPath": "D:\\Source\\Visual Studio Code\\Approval\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
