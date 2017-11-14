@@ -7,9 +7,8 @@
         <th class="preforms__header">#</th>
         <th class="preforms__header">양식명</th>
         <th class="preforms__header">설명</th>
-        <th class="preforms__header">버전</th>
     </tr>
-    <tr>
+    <!-- <tr>
         <td class="preforms__body">1</td>
         <td class="preforms__body">품의서</td>
         <td class="preforms__body">품의서 작성</td>
@@ -32,5 +31,15 @@
         <td class="preforms__body">테스트 전자결재 문서</td>
         <td class="preforms__body">이 칸이 어디까지 넘어가는지 테스트 하는 전자문서</td>
         <td class="preforms__body">D20171113</td>
-    </tr>
+    </tr> -->
+    
+    @foreach(var forms in Model)
+    {
+        <tr>
+            <td class="preforms__body">@forms.Seq</td>
+            <td class="preforms__body">@forms.Subject</td>
+            <td class="preforms__body">@forms.Explain</td>
+            <!-- <td class="preforms__body">D20171113</td> -->
+        </tr>
+    }
 </table>
