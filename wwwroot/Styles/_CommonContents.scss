@@ -1,5 +1,5 @@
 // Views/Approval/Write
-.preforms {
+.grid {
     margin: auto;
     width: 90%;
     border-top: $border;
@@ -11,10 +11,6 @@
         // border: $border;
         border-bottom: $border;
     }
-    td:nth-child(1) {
-        width: 40px;
-        text-align: center;
-    }
     td {
         padding: 5px 0;
         text-align: center;
@@ -23,5 +19,13 @@
     }
     tr:hover {
         background-color: #f7f7f7;
+    }
+}
+
+.preforms {
+    @extend .grid;
+    td:nth-child(1) {
+        width: 40px;
+        text-align: center;
     }
 }

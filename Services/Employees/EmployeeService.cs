@@ -9,7 +9,7 @@ namespace Approval.Services
     {
         public List<Employee> GetEmployees()
         {
-            string sql = "select TOP 100 * from TB_USERS";
+            string sql = "select TOP 100 * from TB_USER";
             List<Employee> listEmp;
 
             using (connection = new SqlConnection(SetConnString("mssql")))

@@ -7,6 +7,8 @@ namespace Approval.Controllers
 {
     public class Approval : Controller
     {
+        FormService formService;
+
         public IActionResult Summary()
         {
             return View("Summary");
@@ -14,23 +16,16 @@ namespace Approval.Controllers
 
         public IActionResult Write()
         {
-            // string selector = null;
-            
-            // if (id != null)
-            // {
-            //     selector = string.Format("Write/{0}", id);
-            // }
-            // else 
-            // {
-            //     selector = string.Format("Write/{0}", "WD001");
-            // }
+            formService = new FormService();
+            var result = formService.GetFormList();
 
-            // return View(selector);
+            return View("Write/Front", result);
+        }
 
-            FormService service = new FormService();
-            var result = service.GetFormList();
-
-            return View("Write/WD001", result);
+        public IActionResult Write(string id)
+        {
+            formService = new FormService();
+            return View("Write/WD001");
         }
 
         public IActionResult GetEmployees()

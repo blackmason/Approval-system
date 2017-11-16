@@ -2,14 +2,13 @@
     Layout = "_Layout";
 }
 
-<table>
+<table class="grid">
     <tr>
         <th>코드</th>
         <th>이름</th>
         <th>이메일</th>
         <th>성별</th>
         <th>부서</th>
-        <th>코멘트</th>
         <th>날짜</th>
     </tr>
     @foreach(var item in Model)
@@ -20,7 +19,6 @@
             <td>@item.Email</td>
             <td>@item.Gender</td>
             <td>@item.Department</td>
-            <td>@item.Comment</td>
             <td>@item.Created</td>
         </tr>
     }
