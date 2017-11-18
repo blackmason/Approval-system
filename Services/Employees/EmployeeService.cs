@@ -9,7 +9,16 @@ namespace Approval.Services
     {
         public List<Employee> GetEmployees()
         {
-            string sql = "select TOP 100 * from TB_USER";
+            string sql = @"SELECT
+                             A.Code
+                            ,A.Name
+                            ,A.Email
+                            ,(CASE WHEN A.Gender = 'M' THEN 'Male' ELSE 'Female' END) Gender
+                            ,B.Name AS Department
+                            ,A.Created
+                        FROM 
+                            TB_USER A
+                        INNER JOIN TB_DEPARTMENT B ON A.DepartmentCode = B.Code";
             List<Employee> listEmp;
 
             using (connection = new SqlConnection(SetConnString("mssql")))
@@ -28,8 +37,8 @@ namespace Approval.Services
                     emp.Name = reader["Name"].ToString();
                     emp.Email = reader["Email"].ToString();
                     emp.Gender = reader["Gender"].ToString();
-                    emp.Department = reader["DepartmentCode"].ToString();
-                    emp.Comment = reader["Comment"].ToString();
+                    emp.Department = reader["Department"].ToString();
+                    // emp.Comment = reader["Comment"].ToString();
                     emp.Created = reader["Created"].ToString();
                     listEmp.Add(emp);
                 }

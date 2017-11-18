@@ -14,18 +14,19 @@ namespace Approval.Controllers
             return View("Summary");
         }
 
-        public IActionResult Write()
+        public IActionResult Write(string id)
         {
             formService = new FormService();
             var result = formService.GetFormList();
 
-            return View("Write/Front", result);
-        }
-
-        public IActionResult Write(string id)
-        {
-            formService = new FormService();
-            return View("Write/WD001");
+            if ("WD001" == id)
+            {
+                return View("Write/WD001");
+            }
+            else 
+            {
+                return View("Write/Front", result);
+            }
         }
 
         public IActionResult GetEmployees()

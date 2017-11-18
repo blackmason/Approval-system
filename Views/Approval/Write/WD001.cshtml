@@ -1,0 +1,50 @@
+@{
+    Layout = "_Layout";
+}
+<!-- 
+    작성자(부서)/기안자(부서)/작성일자
+    문서타입/문서번호
+    결재자/참조자
+    문서제목
+ -->
+
+<table class="grid form">
+    <tr>
+        <th class="form-header">기안자</th>
+        <td class="form-body">&nbsp;</td>
+        <th class="form-header">작성일자</th>
+        <td class="form-body">&nbsp;</td>
+    </tr>
+    <tr>
+        <th class="form-header">문서타입</td>
+        <td class="form-body"></td>
+        <th class="form-header">문서번호</td>
+        <td class="form-body"></td>
+    </tr>
+    <tr>
+        <th class="form-header">결재라인</td>
+        <td class="form-body">결재라인 들어갈 자리</td>
+        <th class="form-header">참조자</td>
+        <td class="form-body">참조자 들어갈 자리</td>
+    </tr>
+    <tr>
+        <th class="form-header">제목</td>
+        <td class="form-body" colspan="3">문서 제목이 들어갈 자리</td>
+    </tr>
+    <tr>
+        <td class="form-content" colspan="4">
+            <div id="summernote"></div>
+        </td>
+    </tr>
+</table>
+
+<script>
+    $(document).ready(function (){
+        $("#summernote").summernote({
+            height: 500,
+            minHeight: null,
+            maxHeight: null,
+            focus: true
+        });
+    });
+</script>
