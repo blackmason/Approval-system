@@ -1,0 +1,63 @@
+@{
+    Layout = "_OnlyEnviroment";
+}
+
+<h3>Set Approval page</h3>
+<div class="appr-line">
+    <div class="appr-line__search">
+        <input type="text" name="searchName" maxlength="20" size="20" />
+        <button class="">검색</button>
+    </div>
+    <div class="appr-line__employee-tree">부서>직급>이름 목록</div>
+    <div class="appr-line__confirm-tree">결재라인에 추가된 목록</div>
+</div>
+
+<style>
+    html, body{
+        margin: 0;
+        padding: 0;
+    }
+    .appr-line {
+        margin: 0 auto;
+        width: 100%;
+    }
+    h3 {
+        background-color: #ccc;
+    }
+    .appr-line__search {
+        /* width: 100%; */
+        border: 1px solid green;
+    }
+    .appr-line__employee-tree {
+        float: left;
+        width: 50%;
+        height: 90%;
+        border: 1px solid red;
+        overflow-y: auto;
+    }
+    .appr-line__confirm-tree {
+        float: left;
+        width: 49%;
+        height: 90%;
+        border: 1px solid red;
+    }
+</style>
+
+<script>
+    $(document).ready(function(){
+        var department = [];
+        
+        $.ajax({
+            url: '/Approval/GetEmployees',
+            success: function(data){
+                if (data.length >= 1) {
+                    for (var i = 0; i <= data.length - 1; i++) {
+                        department[i] = data[i].department
+                    }
+                }
+
+                alert(department);
+            }
+        });
+    });
+</script>

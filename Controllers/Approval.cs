@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Approval.Models;
 using Approval.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -29,12 +30,17 @@ namespace Approval.Controllers
             }
         }
 
-        public IActionResult GetEmployees()
+        public IActionResult SetApproval(string id)
+        {
+            return View("Write/SetApproval");
+        }
+
+        public List<Employee> GetEmployees()
         {
             EmployeeService service = new EmployeeService();
             List<Employee> listEmp = service.GetEmployees();
 
-            return View("Working/List", listEmp);
+            return listEmp;
         }
     }
 }
