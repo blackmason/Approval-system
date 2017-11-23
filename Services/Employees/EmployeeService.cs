@@ -19,8 +19,8 @@ namespace Approval.Services
                         FROM 
                             TB_USER A
                         INNER JOIN TB_DEPARTMENT B ON A.DepartmentCode = B.Code";
-            List<Employee> listEmp;
 
+            List<Employee> listEmp;
             using (connection = new SqlConnection(SetConnString("mssql")))
             {
                 connection.Open();

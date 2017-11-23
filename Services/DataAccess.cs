@@ -9,13 +9,15 @@ namespace Approval.Services
         protected SqlCommand command;
         protected SqlDataReader reader;
         protected SqlDataAdapter adapter;
-        string connString = null;
+        
 
         public DataAccess()
         { }
         
         protected string SetConnString(string connType)
         {
+            string connString = string.Empty;
+
             if (connType == "mssql")
             {
                 return connString = "workstation id=APPROVAL.mssql.somee.com;packet size=4096;user id=peakpanda;pwd=wpfhznf21;data source=APPROVAL.mssql.somee.com;persist security info=False;initial catalog=APPROVAL";

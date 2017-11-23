@@ -48,11 +48,11 @@
         var department = [];
         
         $.ajax({
-            url: '/Approval/GetEmployees',
+            url: '/Approval/GetDepartment',
             success: function(data){
                 if (data.length >= 1) {
                     for (var i = 0; i <= data.length - 1; i++) {
-                        department[i] = data[i].department
+                        department[i] = data[i].name
                     }
                 }
 

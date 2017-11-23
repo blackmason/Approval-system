@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Approval.Models;
@@ -38,9 +39,17 @@ namespace Approval.Controllers
         public List<Employee> GetEmployees()
         {
             EmployeeService service = new EmployeeService();
-            List<Employee> listEmp = service.GetEmployees();
+            var empList = service.GetEmployees();
 
-            return listEmp;
+            return empList;
+        }
+
+        public List<Department> GetDepartment()
+        {
+            DepartmentService service = new DepartmentService();
+            var deptList = service.GetDepartment();
+            
+            return deptList;
         }
     }
 }
