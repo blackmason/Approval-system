@@ -14,7 +14,9 @@ namespace Approval.Services
                             ,A.Name
                             ,A.Email
                             ,(CASE WHEN A.Gender = 'M' THEN 'Male' ELSE 'Female' END) Gender
-                            ,B.Name AS Department
+                            ,A.DepartmentCode AS DeptCode
+                            ,B.Name AS DeptName
+                            ,A.Comment
                             ,A.Created
                         FROM 
                             TB_USER A
@@ -37,8 +39,9 @@ namespace Approval.Services
                     emp.Name = reader["Name"].ToString();
                     emp.Email = reader["Email"].ToString();
                     emp.Gender = reader["Gender"].ToString();
-                    emp.Department = reader["Department"].ToString();
-                    // emp.Comment = reader["Comment"].ToString();
+                    emp.DepartmentCode = reader["DeptCode"].ToString();
+                    emp.DepartmentName = reader["DeptName"].ToString();
+                    emp.Comment = reader["Comment"].ToString();
                     emp.Created = reader["Created"].ToString();
                     listEmp.Add(emp);
                 }

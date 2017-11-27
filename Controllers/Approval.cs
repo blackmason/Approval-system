@@ -4,6 +4,7 @@ using System.Linq;
 using Approval.Models;
 using Approval.Services;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace Approval.Controllers
 {
@@ -33,7 +34,8 @@ namespace Approval.Controllers
 
         public IActionResult SetApproval(string id)
         {
-            return View("Write/SetApproval");
+            var res = GetEmployees();
+            return View("Write/SetApproval", res);
         }
 
         public List<Employee> GetEmployees()
