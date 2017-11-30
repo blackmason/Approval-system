@@ -34,24 +34,24 @@ namespace Approval.Controllers
 
         public IActionResult SetApproval(string id)
         {
-            var res = GetEmployees();
-            return View("Write/SetApproval", res);
+            return View("Write/SetApproval");
         }
 
-        public List<Employee> GetEmployees()
+        public JsonResult GetEmployees()
         {
             EmployeeService service = new EmployeeService();
             var empList = service.GetEmployees();
 
-            return empList;
+            return Json(empList);
         }
 
-        public List<Department> GetDepartment()
+        // public List<Department> GetDepartment()
+        public JsonResult GetDepartment()
         {
             DepartmentService service = new DepartmentService();
             var deptList = service.GetDepartment();
-            
-            return deptList;
+
+            return Json(deptList);
         }
     }
 }

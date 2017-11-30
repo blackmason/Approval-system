@@ -10,17 +10,16 @@ namespace Approval.Services
         public List<Employee> GetEmployees()
         {
             string sql = @"SELECT
-                             A.Code
-                            ,A.Name
-                            ,A.Email
-                            ,(CASE WHEN A.Gender = 'M' THEN 'Male' ELSE 'Female' END) Gender
-                            ,A.DepartmentCode AS DeptCode
-                            ,B.Name AS DeptName
-                            ,A.Comment
-                            ,A.Created
+                             TOP 100
+                             Code
+                            ,Name
+                            ,Email
+                            ,(CASE WHEN Gender = 'M' THEN 'Male' ELSE 'Female' END) Gender
+                            ,DepartmentCode
+                            ,Comment
+                            ,Created
                         FROM 
-                            TB_USER A
-                        INNER JOIN TB_DEPARTMENT B ON A.DepartmentCode = B.Code";
+                            TB_USER";
 
             List<Employee> listEmp;
             using (connection = new SqlConnection(SetConnString("mssql")))
@@ -39,8 +38,7 @@ namespace Approval.Services
                     emp.Name = reader["Name"].ToString();
                     emp.Email = reader["Email"].ToString();
                     emp.Gender = reader["Gender"].ToString();
-                    emp.DepartmentCode = reader["DeptCode"].ToString();
-                    emp.DepartmentName = reader["DeptName"].ToString();
+                    emp.DepartmentCode = reader["DepartmentCode"].ToString();
                     emp.Comment = reader["Comment"].ToString();
                     emp.Created = reader["Created"].ToString();
                     listEmp.Add(emp);

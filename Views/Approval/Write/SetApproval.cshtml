@@ -9,6 +9,8 @@
         <button class="">검색</button>
     </div>
     <div class="appr-line__employee-tree">부서>직급>이름 목록
+        <ul id="treeDemo" class="ztree"></ul>
+        </div>
     </div>
     <div class="appr-line__confirm-tree">결재라인에 추가된 목록</div>
 </div>
@@ -46,17 +48,6 @@
 
 <script>
     $(document).ready(function(){
-        var department = [];
-        
-        $.ajax({
-            url: '/Approval/GetEmployees',
-            success: function(data){
-                if (data.length >= 1) {
-                    for (var i = 0; i <= data.length - 1; i++) {
-                        department[i] = data[i].DepartmentName
-                    }
-                }
-            }
-        });
+        GetDepartment();
     });
 </script>
