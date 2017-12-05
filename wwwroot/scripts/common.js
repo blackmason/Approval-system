@@ -20,7 +20,7 @@ function InitSummernote() {
 
 // 결재라인 지정
 function OpenApprovalLine() {
-    window.open('/Approval/SetApproval','_blank','width=700,height=400,scrollbars=0,resizable=0');
+    window.open('/Approval/SetApproval','_blank','width=700,height=500,scrollbars=0,resizable=0');
 }
 
 // 결재라인 지정 부서정보 가져오기
@@ -51,7 +51,11 @@ function GetDepartment() {
 // 결재라인 지정 부서에 소속된 직원 가져오기
 function GetEmployeeList(zNodes){
     var zTreeObj;
-    var setting = {};
+    var setting = {
+        check: {
+            enable: true
+        }
+    };
     
     $.ajax({
         url : '/Approval/GetEmployees',
@@ -69,7 +73,7 @@ function GetEmployeeList(zNodes){
                 }
             }
 
-            zTreeObj = $.fn.zTree.init($('#treeDemo'), setting, zNodes);
+            zTreeObj = $.fn.zTree.init($('#EmployeeList'), setting, zNodes);
         }
     });
 }

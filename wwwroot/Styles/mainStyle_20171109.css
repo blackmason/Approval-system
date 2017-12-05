@@ -52,6 +52,9 @@ html, body {
   background-color: #566270;
 }
 
+/*
+    Views/Approval/Write
+*/
 .grid, .preforms {
   margin: auto;
   width: 90%;
@@ -71,6 +74,9 @@ html, body {
   border-bottom: 1px solid #ccc;
 }
 
+/* 
+    /Approval/Write
+*/
 .preforms td:nth-child(1) {
   width: 40px;
   text-align: center;
@@ -85,15 +91,66 @@ html, body {
   width: 90%;
 }
 
-.btn-area .btn-base {
+.btn-base {
   padding: 4px 8px;
   background-color: transparent;
   border: 1px solid #ccc;
   border-radius: 4px;
+  outline: none;
 }
 
-.btn-area .btn-base:hover {
+.btn-base:hover {
   background-color: #eee;
+}
+
+.page-title {
+  padding: 3px 10px;
+  background-color: #566270;
+  color: #fffff3;
+  font-size: 24px;
+}
+
+.content {
+  width: 100%;
+}
+
+.appr-line__search {
+  margin: 3px 10px;
+}
+
+.lbl-area {
+  padding: 3px;
+  border: 1px solid #aaa;
+}
+
+.appr-line {
+  margin: 3px 10px;
+  width: 98%;
+  height: 420px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+}
+
+.appr-line td {
+  border: 1px solid #ccc;
+}
+
+.appr-line__emp-tree,
+.appr-line__confirm-tree,
+.appr-line__refer-tree {
+  width: 44%;
+  vertical-align: top;
+}
+
+.appr-line__emp-tree .scroll,
+.appr-line__confirm-tree .scroll,
+.appr-line__refer-tree .scroll {
+  height: 100%;
+  overflow: auto;
+}
+
+.appr-line__btn-area {
+  text-align: center;
 }
  
 

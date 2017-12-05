@@ -2,49 +2,32 @@
     Layout = "_OnlyEnviroment";
 }
 
-<h3>Set Approval page</h3>
-<div class="appr-line">
+<div class="content">
+    <div class="page-title">결재선지정</div>
     <div class="appr-line__search">
+        <span class="lbl-area">이름검색</span>
         <input type="text" name="searchName" maxlength="20" size="20" />
-        <button class="">검색</button>
+        <button class="btn-search">검색</button>
     </div>
-    <div class="appr-line__employee-tree">부서>직급>이름 목록
-        <ul id="treeDemo" class="ztree"></ul>
-        </div>
-    </div>
-    <div class="appr-line__confirm-tree">결재라인에 추가된 목록</div>
-</div>
 
-<style>
-    html, body{
-        margin: 0;
-        padding: 0;
-    }
-    .appr-line {
-        margin: 0 auto;
-        width: 100%;
-    }
-    h3 {
-        background-color: #ccc;
-    }
-    .appr-line__search {
-        /* width: 100%; */
-        border: 1px solid green;
-    }
-    .appr-line__employee-tree {
-        float: left;
-        width: 50%;
-        height: 90%;
-        border: 1px solid red;
-        overflow-y: auto;
-    }
-    .appr-line__confirm-tree {
-        float: left;
-        width: 49%;
-        height: 90%;
-        border: 1px solid red;
-    }
-</style>
+    <table class="appr-line">
+        <tr>
+            <td class="appr-line__emp-tree" rowspan="2">
+                <div class="scroll">
+                    <ul id="EmployeeList" class="ztree"></ul>
+                </div>
+            </td>
+            <td class="appr-line__btn-area" rowspan="2">
+                <p><button class="btn-base">결재자추가</button></p>
+                <p><button class="btn-base">참조자추가</button></p>
+            </td>
+            <td class="appr-line__confirm-tree">결재자목록</td>
+        </tr>
+        <tr>
+            <td class="appr-line__refer-tree">참조자목록</td>
+        </tr>
+    </table>
+</div>
 
 <script>
     $(document).ready(function(){
