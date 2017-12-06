@@ -10,23 +10,20 @@
         <button class="btn-search">검색</button>
     </div>
 
-    <table class="appr-line">
-        <tr>
-            <td class="appr-line__emp-tree" rowspan="2">
-                <div class="scroll">
-                    <ul id="EmployeeList" class="ztree"></ul>
-                </div>
-            </td>
-            <td class="appr-line__btn-area" rowspan="2">
-                <p><button class="btn-base">결재자추가</button></p>
-                <p><button class="btn-base">참조자추가</button></p>
-            </td>
-            <td class="appr-line__confirm-tree">결재자목록</td>
-        </tr>
-        <tr>
-            <td class="appr-line__refer-tree">참조자목록</td>
-        </tr>
-    </table>
+    <div class="appr-line">
+        <div class="appr-line__emp-tree">
+            <ul id="EmployeeList" class="ztree"></ul>
+        </div>
+        <div class="appr-line__btn-area">
+            <p><button class="btn-base">결재자추가</button></p>
+            <p><button class="btn-base">참조자추가</button></p>
+        </div>
+        <div class="appr-line__select-area">
+            <div class="appr-line__confirm-tree">결재자목록</div>
+            <div class="appr-line__refer-tree">참조자목록</div>
+        </div>
+    </div>
+
 </div>
 
 <script>

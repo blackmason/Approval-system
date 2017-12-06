@@ -115,7 +115,7 @@ html, body {
 }
 
 .appr-line__search {
-  margin: 3px 10px;
+  margin: 3px 6px;
 }
 
 .lbl-area {
@@ -124,33 +124,36 @@ html, body {
 }
 
 .appr-line {
-  margin: 3px 10px;
+  margin: 3px 6px;
   width: 98%;
   height: 420px;
-  border: 1px solid #ccc;
   font-size: 12px;
 }
 
-.appr-line td {
+.appr-line__emp-tree {
+  float: left;
+  width: 44%;
+  height: 100%;
+  overflow-y: auto;
   border: 1px solid #ccc;
 }
 
-.appr-line__emp-tree,
+.appr-line__btn-area {
+  float: left;
+  height: 100%;
+}
+
+.appr-line__select-area {
+  float: left;
+  width: 44%;
+  height: 100%;
+}
+
 .appr-line__confirm-tree,
 .appr-line__refer-tree {
-  width: 44%;
   vertical-align: top;
-}
-
-.appr-line__emp-tree .scroll,
-.appr-line__confirm-tree .scroll,
-.appr-line__refer-tree .scroll {
-  height: 100%;
-  overflow: auto;
-}
-
-.appr-line__btn-area {
-  text-align: center;
+  height: 50%;
+  border: 1px solid #ccc;
 }
  
 
