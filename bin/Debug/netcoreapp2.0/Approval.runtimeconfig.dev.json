@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Peakpanda\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Peakpanda\\.nuget\\packages",
+      "C:\\Users\\peakp\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\peakp\\.nuget\\packages",
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }
