@@ -1,0 +1,51 @@
+@{
+    Layout = "_OnlyEnviroment";
+}
+
+<div class="appr-line">
+    <div class="emp-list-area">
+        <!-- <table class="emp-list">
+            <tr>
+                <th>#</th>
+                <th>부서</th>
+                <th>직급</th>
+                <th>이름</th>
+            </tr>
+            @foreach (var items in Model)
+            {
+                <tr>
+                    <td>@items.Code</td>
+                    <td>@items.DepartmentCode</td>
+                    <td>@items.Name</td>
+                    <td>@items.Name</td>
+                </tr>
+            }
+        </table> -->
+        <ul id="EmployeeList" class="ztree"></ul>
+    </div>
+    <div class="btn-area">
+        <button class="common-border btn-base">결재자추가</button>
+        <button class="common-border btn-base">참조자추가</button>
+        <button class="common-border btn-base">합의자추가</button>
+    </div>
+    <div class="select-list-area">
+        <table class="select-list">
+            <tr>
+                <td class="confirm-list"></td>
+                <td class="refer-list"></td>
+                <td class="agree-list"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        GetDepartment();
+    });
+</script>
+<style>
+    .emp-list-area { width: 100%; height: 200px; border: 1px solid orange; overflow-y: auto; }
+    .btn-area { width: 100%; text-align: center; /*border: 1px solid blue;*/ }
+    .select-list-area { width: 100%; height: 200px; border: 1px solid red; }
+</style>

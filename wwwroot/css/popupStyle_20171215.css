@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  overflow: hidden;
+}
+
+#wrap {
+  margin: 0 auto;
+  width: 1080px;
+  min-height: 800px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  background-color: #fff;
+}
+
+/*
+    https://www.webdesignrankings.com/resources/lolcolors/
+    #566270
+    #FFFFF3
+    #E0E3DA
+    #A593E0
+*/
+.navi {
+  width: 100%;
+  height: 40px;
+  background-color: #566270;
+}
+
+.navi__top-menu {
+  list-style: none;
+}
+
+.navi__top-menu li {
+  padding: 0 15px;
+  display: inline-block;
+  color: #fffff3;
+  line-height: 40px;
+}
+
+.container {
+  padding: 10px;
+  min-height: 800px;
+}
+
+.content {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.footer {
+  height: 200px;
+  background-color: #566270;
+}
+
+.page-title {
+  padding: 3px 10px;
+  background-color: #566270;
+  color: #fffff3;
+  font-size: 24px;
+}
+
+.section-title {
+  padding: 3px 3px;
+  display: block;
+  background-color: #566270;
+  color: #fffff3;
+}
+
+.content {
+  width: 100%;
+}
+
+.appr-line__search {
+  margin: 3px 6px;
+}
+
+.lbl-area {
+  padding: 3px;
+  border: 1px solid #aaa;
+}
+
+.appr-line {
+  margin: 3px 6px;
+  width: 98%;
+  height: 420px;
+  font-size: 12px;
+}
+
+.appr-line__emp-tree {
+  float: left;
+  width: 43%;
+  height: 600px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}
+
+.appr-line__btn-area {
+  float: left;
+  margin: 200px 5px;
+  height: 100%;
+}
+
+.appr-line__select-area {
+  float: left;
+  width: 44%;
+  height: 100%;
+}
+
+.appr-line__confirm-tree,
+.appr-line__refer-tree,
+.appr-line__agree-tree {
+  vertical-align: top;
+  width: 350px;
+  height: 200px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+ 
+
+ /*# sourceMappingURL= popupStyle_20171215.css.map */

@@ -8,6 +8,7 @@
         <span class="lbl-area">이름검색</span>
         <input type="text" name="searchName" maxlength="20" size="20" />
         <button class="btn-search">검색</button>
+        <button class="btn-search">닫기</button>
     </div>
 
     <div class="appr-line">
@@ -15,12 +16,25 @@
             <ul id="EmployeeList" class="ztree"></ul>
         </div>
         <div class="appr-line__btn-area">
-            <p><button class="btn-base">결재자추가</button></p>
-            <p><button class="btn-base">참조자추가</button></p>
+            <div class="btn-area">
+                <p><button class="btn-base">결재자추가</button></p>
+                <p><button class="btn-base">참조자추가</button></p>
+                <p><button class="btn-base">합의자추가</button></p>
+            </div>
         </div>
         <div class="appr-line__select-area">
-            <div class="appr-line__confirm-tree">결재자목록</div>
-            <div class="appr-line__refer-tree">참조자목록</div>
+            <div class="appr-line__confirm-tree">
+                <span class="section-title">결재자목록</span>
+                <select class="selected-list" name=""></select>
+            </div>
+            <div class="appr-line__refer-tree">
+                <span class="section-title">참조자목록</span>
+                <select class="selected-list" name=""></select>
+            </div>
+            <div class="appr-line__agree-tree">
+                <span class="section-title">합의자목록</span>
+                <select class="selected-list" name=""></select>
+            </div>
         </div>
     </div>
 

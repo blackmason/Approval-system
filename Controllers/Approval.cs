@@ -34,7 +34,16 @@ namespace Approval.Controllers
 
         public IActionResult SetApproval(string id)
         {
-            return View("Write/SetApproval");
+            if (null == id || "" == id)
+            {
+                return View("Write/SetApproval");
+            }
+            else
+            {
+                var res = GetEmployeesList();
+                return View("Write/SetApproval_2", res);
+            }
+            
         }
 
         public JsonResult GetEmployees()
@@ -45,13 +54,28 @@ namespace Approval.Controllers
             return Json(empList);
         }
 
-        // public List<Department> GetDepartment()
         public JsonResult GetDepartment()
         {
             DepartmentService service = new DepartmentService();
             var deptList = service.GetDepartment();
 
             return Json(deptList);
+        }
+
+        public List<Employee> GetEmployeesList()
+        {
+            EmployeeService service = new EmployeeService();
+            var empList = service.GetEmployees();
+
+            return empList;
+        }
+
+        public List<Department> GetDepartmentList()
+        {
+            DepartmentService service = new DepartmentService();
+            var deptList = service.GetDepartment();
+
+            return deptList;
         }
     }
 }

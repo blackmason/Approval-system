@@ -6,13 +6,16 @@ $(document).ready(function(){
         OpenApprovalLine();
     });
     
+    $('#btnSetApprovalLine2').click(function(){
+        OpenApprovalLine(2);
+    });
 });
 
 //tinymce 초기화
 function InitTinyMCE() {
     tinymce.init({
         selector: '#tinymce-editor',
-        min_height: 400,
+        min_height: 500,
         menubar: false,
         branding: true,
         plugins: 'table code image media textcolor colorpicker link lists',
@@ -23,8 +26,12 @@ function InitTinyMCE() {
 }
 
 // 결재라인 지정
-function OpenApprovalLine() {
-    window.open('/Approval/SetApproval','_blank','width=700,height=500,scrollbars=0,resizable=0');
+function OpenApprovalLine(id) {
+    if (null == id || "" == id) {
+        window.open('/Approval/SetApproval','_blank','width=800,height=680,scrollbars=0,resizable=0');
+    } else {
+        window.open('/Approval/SetApproval/2','_blank','width=830,height=500,scrollbars=0,resizable=0');
+    }
 }
 
 // 결재라인 지정 부서정보 가져오기
