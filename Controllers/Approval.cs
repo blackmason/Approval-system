@@ -40,7 +40,7 @@ namespace Approval.Controllers
             }
             else
             {
-                var res = GetEmployeesList();
+                var res = GetDepartmentList();
                 return View("Write/SetApproval_2", res);
             }
             

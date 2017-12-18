@@ -10,6 +10,19 @@ html, body {
   overflow: hidden;
 }
 
+.btn-base {
+  padding: 3px 8px 5px 8px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.btn-base:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
 #wrap {
   margin: 0 auto;
   width: 1080px;
