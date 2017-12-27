@@ -1,0 +1,58 @@
+// 컨텐츠 스타일
+/// 홈 메뉴 레이아웃
+.section {
+    margin: 0 auto;
+    display: inline-block;
+    // border: 1px solid red;
+}
+.summary-group {
+    display: inline-block;
+    // border: 1px solid #ccc;
+}
+.summary-box {
+    margin: 0 5px 15px 5px;
+    width: 450px;
+    height: 250px;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/// 문서작성 메뉴 레이아웃
+.table-list {
+    margin: auto;
+    width: 100%;
+    @include cus-border-top(1px, #ccc);
+    @include cus-border-bot(1px, #ccc);
+    border-collapse: collapse;
+    tr:hover {
+        background-color: #eee;
+    }
+}
+.table-list__header {
+    padding: 10px 0;
+    @include cus-border-bot(2px, #ccc);
+    background-color: #f1f1f1;
+    &:nth-child(1) {
+        width: 40px;
+    }
+    &:nth-child(5) {
+        width: 100px;
+    }
+}
+.table-list__item {
+    padding: 10px 0;
+    border-bottom: $normal-border;
+}
+
+.btn-base {
+    padding: 3px 8px 5px 8px;
+    background-color:transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    &:hover {
+        background-color: #eee;
+        cursor: pointer;
+    }
+}

@@ -1,11 +1,31 @@
 // Position & Sizing
+/// 사이트 전체 레이아웃
 #wrap {
     margin: 0 auto;
     width: 1080px;
     min-height: 800px;
-    border-left: $border;
-    border-right: $border;
-    background-color: #fff;
+    border-left: $normal-border;
+    border-right: $normal-border;
+}
+#header {
+    width: 1080px;
+}
+#container {
+    position: relative;
+    width: 100%;
+    min-height: 800px;
+    // background-color: red;
+}
+#content {
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 95%;
+    text-align: center;
+    // background-color: pink;
+}
+#footer {
+    height: 200px;
+    background-color: #566270;
 }
 
 /*
@@ -15,12 +35,12 @@
     #E0E3DA
     #A593E0
 */
-.navi {
+.global-navi {
     width: 100%;
     height: 40px;
     background-color: #566270;
 }
-.navi__top-menu {
+.global-navi__menu {
     list-style: none;
     li {
         padding: 0 15px;
@@ -28,18 +48,4 @@
         color: #fffff3;
         line-height: 40px;
     }
-}
-.container {
-    padding: 10px;
-    min-height: 800px;
-    // border: $border;
-}
-.content {
-    margin: 0 auto;
-    width: 90%;
-    // border: 1px solid red;
-}
-.footer {
-    height: 200px;
-    background-color: #566270;
 }

@@ -12,9 +12,9 @@ html, body {
 
 .btn-base {
   padding: 3px 8px 5px 8px;
-  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background-color: transparent;
   outline: none;
 }
 
@@ -29,7 +29,28 @@ html, body {
   min-height: 800px;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
-  background-color: #fff;
+}
+
+#header {
+  width: 1080px;
+}
+
+#container {
+  position: relative;
+  width: 100%;
+  min-height: 800px;
+}
+
+#content {
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 95%;
+  text-align: center;
+}
+
+#footer {
+  height: 200px;
+  background-color: #566270;
 }
 
 /*
@@ -39,42 +60,42 @@ html, body {
     #E0E3DA
     #A593E0
 */
-.navi {
+.global-navi {
   width: 100%;
   height: 40px;
   background-color: #566270;
 }
 
-.navi__top-menu {
+.global-navi__menu {
   list-style: none;
 }
 
-.navi__top-menu li {
+.global-navi__menu li {
   padding: 0 15px;
   display: inline-block;
   color: #fffff3;
   line-height: 40px;
 }
 
-.container {
-  padding: 10px;
-  min-height: 800px;
-}
-
-.content {
+.section {
   margin: 0 auto;
-  width: 90%;
+  display: inline-block;
 }
 
-.footer {
-  height: 200px;
-  background-color: #566270;
+.summary-group {
+  display: inline-block;
 }
 
-/*
-    Views/Approval/Write
-*/
-.grid, .preforms {
+.summary-box {
+  margin: 0 5px 15px 5px;
+  width: 450px;
+  height: 250px;
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.table-list {
   margin: auto;
   width: 100%;
   border-top: 1px solid #ccc;
@@ -82,40 +103,31 @@ html, body {
   border-collapse: collapse;
 }
 
-.grid th, .preforms th {
-  padding: 5px 0;
-  background-color: #f5f5f5;
-  border-bottom: 1px solid #ccc;
+.table-list tr:hover {
+  background-color: #eee;
 }
 
-.grid td, .preforms td {
-  padding: 5px 0;
-  border-bottom: 1px solid #ccc;
+.table-list__header {
+  padding: 10px 0;
+  border-bottom: 2px solid #ccc;
+  background-color: #f1f1f1;
 }
 
-/* 
-    /Approval/Write
-*/
-.preforms td:nth-child(1) {
+.table-list__header:nth-child(1) {
   width: 40px;
-  text-align: center;
 }
 
-.preforms tr:hover {
-  background-color: #f7f7f7;
+.table-list__header:nth-child(5) {
+  width: 100px;
 }
 
-.preforms__body {
-  text-align: center;
-}
-
-.btn-area {
-  margin: 5px auto;
+.table-list__item {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
 }
 
 .btn-base {
-  margin: 3px 0;
-  padding: 4px 8px;
+  padding: 3px 8px 5px 8px;
   background-color: transparent;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -124,7 +136,6 @@ html, body {
 
 .btn-base:hover {
   background-color: #eee;
+  cursor: pointer;
 }
- 
-
- /*# sourceMappingURL= mainStyle_20171109.css.map */
+/*# sourceMappingURL=mainStyle_20171109.css.map */
