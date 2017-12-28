@@ -5,14 +5,15 @@
     width: 95%;
     margin: 0 auto;
 }
-.caption-area {
-    width: 100%; 
-    background-color: #566270; 
-}
-.page-caption { 
-    margin: 0 10px;
-    line-height: 35px;
-    color: #eee;
+.page-title {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    background-color: #566270;
+    h3 {
+        margin: 0 10px;
+    }
 }
 .search-area {
     margin: 10px 0;

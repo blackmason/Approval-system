@@ -14,8 +14,15 @@
 </head>
 <body>
     <div id="wrap">
-        <div class="container">
-            @RenderBody()
+        <div id="header">
+            <div class="page-title">
+                <h3>@ViewData["pageTitle"]</h3>
+            </div>
+        </div>
+        <div id="container">
+            <div class="content">
+                @RenderBody()
+            </div>
         </div>
     </div>
 </body>

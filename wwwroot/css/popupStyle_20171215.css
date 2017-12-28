@@ -10,33 +10,21 @@ html, body {
   overflow: hidden;
 }
 
-.btn-base {
-  padding: 3px 8px 5px 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: transparent;
-  outline: none;
-}
-
-.btn-base:hover {
-  background-color: #eee;
-  cursor: pointer;
-}
-
 .content {
   width: 95%;
   margin: 0 auto;
 }
 
-.caption-area {
+.page-title {
   width: 100%;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
   background-color: #566270;
 }
 
-.page-caption {
+.page-title h3 {
   margin: 0 10px;
-  line-height: 35px;
-  color: #eee;
 }
 
 .search-area {
