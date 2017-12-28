@@ -12,14 +12,15 @@ html, body {
 
 .btn-base {
   padding: 3px 8px 5px 8px;
+  background-color: #566270;
   border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: transparent;
   outline: none;
+  color: #fff;
 }
 
 .btn-base:hover {
-  background-color: #eee;
+  background-color: #99a0a9;
   cursor: pointer;
 }
 
@@ -36,7 +37,6 @@ html, body {
 }
 
 #container {
-  position: relative;
   width: 100%;
   min-height: 800px;
 }
@@ -44,7 +44,6 @@ html, body {
 #content {
   margin: 0 auto;
   padding: 20px 0;
-  width: 95%;
   text-align: center;
 }
 
@@ -80,6 +79,7 @@ html, body {
 .section {
   margin: 0 auto;
   display: inline-block;
+  width: 90%;
 }
 
 .summary-group {
@@ -97,7 +97,7 @@ html, body {
 
 .table-list {
   margin: auto;
-  width: 100%;
+  width: 90%;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   border-collapse: collapse;
@@ -126,16 +126,30 @@ html, body {
   border-bottom: 1px solid #ccc;
 }
 
-.btn-base {
-  padding: 3px 8px 5px 8px;
-  background-color: transparent;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  outline: none;
+.table-form {
+  margin: 10px auto;
+  width: 90%;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-collapse: collapse;
 }
 
-.btn-base:hover {
-  background-color: #eee;
-  cursor: pointer;
+.table-form__header {
+  padding: 5px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.table-form__item {
+  padding: 5px 0;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.btn-area {
+  margin: 0 auto;
+  width: 90%;
+  text-align: left;
 }
 /*# sourceMappingURL=mainStyle_20171109.css.map */

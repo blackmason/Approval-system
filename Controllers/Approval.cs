@@ -41,6 +41,7 @@ namespace Approval.Controllers
             else
             {
                 var res = GetDepartmentList();
+                ViewData["pageTitle"] = "결재선지정";
                 return View("Write/SetApproval_2", res);
             }
             

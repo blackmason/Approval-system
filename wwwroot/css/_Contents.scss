@@ -3,6 +3,7 @@
 .section {
     margin: 0 auto;
     display: inline-block;
+    width: 90%;
     // border: 1px solid red;
 }
 .summary-group {
@@ -18,10 +19,10 @@
     border-radius: 6px;
 }
 
-/// 문서작성 메뉴 레이아웃
+/// 문서작성-프론트 메뉴 레이아웃
 .table-list {
     margin: auto;
-    width: 100%;
+    width: 90%;
     @include cus-border-top(1px, #ccc);
     @include cus-border-bot(1px, #ccc);
     border-collapse: collapse;
@@ -45,14 +46,28 @@
     border-bottom: $normal-border;
 }
 
-.btn-base {
-    padding: 3px 8px 5px 8px;
-    background-color:transparent;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-    &:hover {
-        background-color: #eee;
-        cursor: pointer;
-    }
+/// 문서작성-폼 메뉴 레이아웃
+.table-form {
+    margin: 10px auto;
+    width: 90%;
+    @include cus-border-top(1px, #ccc);
+    @include cus-border-bot(1px, #ccc);
+    border-collapse: collapse;
+}
+.table-form__header {
+    padding: 5px 0;
+    @include cus-border-top(1px, #ccc);
+    @include cus-border-bot(1px, #ccc);
+    background-color: #f1f1f1;
+}
+.table-form__item {
+    padding: 5px 0;
+    text-align: left;
+    border-bottom: $normal-border;
+}
+
+.btn-area {
+    margin: 0 auto;
+    width: 90%;
+    text-align: left;
 }

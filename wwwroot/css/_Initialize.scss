@@ -1,9 +1,10 @@
 // ##Reserve
+$normal-border : 1px solid #ccc;
 @mixin cus-border-all($size, $color) {
     border: $size solid $color;
 }
 @mixin cus-border-top($size, $color) {
-    border-bottom: $size solid $color;
+    border-top: $size solid $color;
 }
 @mixin cus-border-bot($size, $color) {
     border-bottom: $size solid $color;
@@ -23,12 +24,13 @@ html, body {
 
 .btn-base {
     padding: 3px 8px 5px 8px;
+    background-color:#566270;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: transparent;
     outline: none;
+    color: #fff;
     &:hover {
-        background-color: #eee;
+        background-color: #99a0a9;
         cursor: pointer;
     }
 }

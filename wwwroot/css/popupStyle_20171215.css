@@ -12,14 +12,15 @@ html, body {
 
 .btn-base {
   padding: 3px 8px 5px 8px;
+  background-color: #566270;
   border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: transparent;
   outline: none;
+  color: #fff;
 }
 
 .btn-base:hover {
-  background-color: #eee;
+  background-color: #99a0a9;
   cursor: pointer;
 }
 
@@ -28,15 +29,16 @@ html, body {
   margin: 0 auto;
 }
 
-.caption-area {
+.page-title {
   width: 100%;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
   background-color: #566270;
 }
 
-.page-caption {
+.page-title h3 {
   margin: 0 10px;
-  line-height: 35px;
-  color: #eee;
 }
 
 .search-area {
@@ -63,8 +65,7 @@ html, body {
 .keyword-area .keyword {
   padding: 0 5px;
   width: 95%;
-  height: 25px;
-  font-size: 17px;
+  font-size: 15px;
   border: 0;
   outline: none;
 }
@@ -86,7 +87,7 @@ html, body {
   overflow-y: auto;
 }
 
-.emp-list {
+.employee-list {
   display: inline-block;
   margin-left: 10px;
   width: 58%;
@@ -94,34 +95,34 @@ html, body {
   border: 1px solid #ccc;
 }
 
-.emp-tbl {
+.empolyees {
   width: 100%;
   border-collapse: collapse;
 }
 
-.emp-tbl thead {
+.empolyees thead {
   background-color: #e1e1e1;
 }
 
-.emp-tbl tr:hover {
+.empolyees tr:hover {
   background-color: #f1f1f1;
 }
 
-.emp-tbl td {
+.empolyees td {
   border: 1px solid #ccc;
   border-top: none;
   text-align: center;
 }
 
-.emp-tbl td:nth-child(1) {
+.empolyees td:nth-child(1) {
   width: 30px;
 }
 
-.emp-tbl td:nth-child(2) {
+.empolyees td:nth-child(2) {
   width: 30px;
 }
 
-.emp-tbl td:nth-child(4) {
+.empolyees td:nth-child(4) {
   width: 50px;
 }
 
