@@ -28,15 +28,24 @@ function InitTinyMCE() {
 // 결재라인 지정
 function OpenApprovalLine(id) {
     if (null == id || "" == id) {
-        window.open('/Approval/SetApproval','_blank','width=800,height=680,scrollbars=0,resizable=0');
+        window.open('/Approval/SetApproval','SetApprovalLine','width=800,height=680,scrollbars=0,resizable=0');
     } else {
-        window.open('/Approval/SetApproval/2','_blank','width=830,height=500,scrollbars=0,resizable=0');
+        window.open('/Approval/SetApproval/2','SetApprovalLine','width=830,height=500,scrollbars=0,resizable=0');
     }
 }
 
 // 결재라인 지정 부서정보 가져오기
 function GetDepartment() {
     var zNodes = [];
+    var zTreeObj;
+    var setting = {
+        check: {
+            enable: true
+        },
+        view: {
+            showIcon: true
+        }
+    };
     
     $.ajax({
         url : '/Approval/GetDepartment',
@@ -47,11 +56,13 @@ function GetDepartment() {
                     zNodes[i] = {
                     code : data[i].code,
                     name : data[i].name,
-                    open : false,
+                    // open : false,
+                    icon : '/img/zTree/folder_icon.png',
                     children : []
                 }
             }
-            GetEmployeeList(zNodes);
+            // GetEmployeeList(zNodes);
+            zTreeObj = $.fn.zTree.init($('#DeptList'), setting, zNodes);
         },
         error : function(){
             alert("Error");
@@ -84,7 +95,7 @@ function GetEmployeeList(zNodes){
                 }
             }
 
-            zTreeObj = $.fn.zTree.init($('#EmployeeList'), setting, zNodes);
+            zTreeObj = $.fn.zTree.init($('#DeptList'), setting, zNodes);
         }
     });
 }

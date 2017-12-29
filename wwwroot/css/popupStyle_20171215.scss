@@ -63,7 +63,7 @@
     height: 280px;
     border: 1px solid #ccc;
 }
-.empolyees {
+.employee {
     width: 100%;
     border-collapse: collapse;
     thead {
@@ -78,19 +78,21 @@
         text-align: center;
 
         &:nth-child(1) {
+            border-left: none;
             width: 30px;
         }
         &:nth-child(2) {
             width: 30px;
         }
         &:nth-child(4) {
+            border-right: none;
             width: 50px;
         }
     }
 }
-.emp-tbl__header {
+.employee-list__header {
     height: 30px;
 }
-.emp-tbl__body {
+.employee-list__item {
     height: 25px;
 }

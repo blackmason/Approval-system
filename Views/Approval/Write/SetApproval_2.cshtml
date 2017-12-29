@@ -17,55 +17,57 @@
 <div class="dept-area">
     <!-- 부서 리스트 -->
     <div class="dept-list">
-        <ul id="EmployeeList" class="ztree"></ul>
+        <ul id="DeptList" class="ztree"></ul>
     </div>
     <!-- 직원 리스트 -->
     <div class="employee-list">
-        <table class="employees table-list__employees">
+        <table class="employee employee-list__employee">
             <thead>
                 <tr>
-                    <td class="emp-tbl__header">#</td>
-                    <td class="emp-tbl__header"><input type="checkbox" id= "" class="" name="" /></td>
-                    <td class="emp-tbl__header">이름</td>
-                    <td class="emp-tbl__header">직급</td>
+                    <td class="employee-list__header">#</td>
+                    <td class="employee-list__header"><input type="checkbox" id= "" class="" name="" /></td>
+                    <td class="employee-list__header">이름</td>
+                    <td class="employee-list__header">직급</td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td class="emp-tbl__body">1</td>
-                    <td class="emp-tbl__body"><input type="checkbox" id= "" class="" name="" /></td>
-                    <td class="emp-tbl__body">최경원</td>
-                    <td class="emp-tbl__body">사원</td>
+                    <td class="employee-list__item">1</td>
+                    <td class="employee-list__item"><input type="checkbox" id= "" class="" name="" /></td>
+                    <td class="employee-list__item">최경원</td>
+                    <td class="employee-list__item">사원</td>
                 </tr>
                 <tr>
-                    <td class="emp-tbl__body">1</td>
-                    <td class="emp-tbl__body"><input type="checkbox" id= "" class="" name="" /></td>
-                    <td class="emp-tbl__body">Kristensen Williams Crawshaw</td>
-                    <td class="emp-tbl__body">사원</td>
+                    <td class="employee-list__item">1</td>
+                    <td class="employee-list__item"><input type="checkbox" id= "" class="" name="" /></td>
+                    <td class="employee-list__item">Kristensen Williams Crawshaw</td>
+                    <td class="employee-list__item">사원</td>
                 </tr>
                 <tr>
-                    <td class="emp-tbl__body">1</td>
-                    <td class="emp-tbl__body"><input type="checkbox" id= "" class="" name="" /></td>
-                    <td class="emp-tbl__body">Jason Myers</td>
-                    <td class="emp-tbl__body">사원</td>
+                    <td class="employee-list__item">1</td>
+                    <td class="employee-list__item"><input type="checkbox" id= "" class="" name="" /></td>
+                    <td class="employee-list__item">Jason Myers</td>
+                    <td class="employee-list__item">사원</td>
                 </tr>
             </tbody>
         </table>
     </div>
 </div>
     
+<!-- 버튼 -->
 <div class="btn-area">
     <button class="btn-base">결재자추가</button>
     <button class="btn-base">참조자추가</button>
     <button class="btn-base">합의자추가</button>
 </div>
 
-<div class="select-list-area">
+<!-- 결재라인 리스트 -->
+<div class="selected-area">
     <table class="select-list">
         <tr>
-            <td class="confirm-list"></td>
-            <td class="refer-list"></td>
-            <td class="agree-list"></td>
+            <td>부서</td>
+            <td>이름</td>
+            <td>결재타입</td>
         </tr>
     </table>
 </div>
