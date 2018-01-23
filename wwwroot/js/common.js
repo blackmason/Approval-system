@@ -37,6 +37,14 @@ function OpenApprovalLine(id) {
 // 결재라인 지정 부서정보 가져오기
 function GetDepartment() {
     var zNodes = [];
+    var setting = {
+        check: {
+            enable: true, 
+            idKey: 'id',
+            pIdKey: 'pId',
+            isParent: 'isParent'
+        }
+    };
     
     $.ajax({
         url : '/Approval/GetDepartment',
@@ -45,13 +53,15 @@ function GetDepartment() {
             
             for(var i = 0; i <= data.length - 1; i++){
                     zNodes[i] = {
-                    code : data[i].code,
+                    id : data[i].code,
                     name : data[i].name,
+                    isParent: true,
                     open : false,
                     children : []
                 }
             }
-            GetEmployeeList(zNodes);
+            // GetEmployeeList(zNodes);
+            zTreeObj = $.fn.zTree.init($('#EmployeeList'), setting, zNodes);
         },
         error : function(){
             alert("Error");
@@ -60,31 +70,34 @@ function GetDepartment() {
 }
 
 // 결재라인 지정 부서에 소속된 직원 가져오기
-function GetEmployeeList(zNodes){
-    var zTreeObj;
-    var setting = {
-        check: {
-            enable: true
-        }
-    };
+// function GetEmployeeList(zNodes){
+//     var zTreeObj;
+//     var setting = {
+//         check: {
+//             enable: true, 
+//             idKey: 'id',
+//             pIdKey: 'pId',
+//             isParent: 'isParent'
+//         }
+//     };
     
-    $.ajax({
-        url : '/Approval/GetEmployees',
-        dataType : 'json',
-        success : function(data){
-            for(var i = 0; i <= data.length - 1 ; i++){
-                for(var p = 0; p <= zNodes.length - 1; p++){
+//     $.ajax({
+//         url : '/Approval/GetEmployees',
+//         dataType : 'json',
+//         success : function(data){
+//             for(var i = 0; i <= data.length - 1 ; i++){
+//                 for(var p = 0; p <= zNodes.length - 1; p++){
 
-                    if(zNodes[p].code == data[i].departmentCode){
-                        zNodes[p].children.push({
-                            code : data[i].code,
-                            name : data[i].name
-                        });
-                    }
-                }
-            }
+//                     if(zNodes[p].code == data[i].departmentCode){
+//                         zNodes[p].children.push({
+//                             id : data[i].code,
+//                             name : data[i].name
+//                         });
+//                     }
+//                 }
+//             }
 
-            zTreeObj = $.fn.zTree.init($('#EmployeeList'), setting, zNodes);
-        }
-    });
-}
+//             zTreeObj = $.fn.zTree.init($('#EmployeeList'), setting, zNodes);
+//         }
+//     });
+// }

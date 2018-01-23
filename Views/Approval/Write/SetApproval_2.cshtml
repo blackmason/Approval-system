@@ -25,7 +25,7 @@
             <thead>
                 <tr>
                     <td class="emp-tbl__header">#</td>
-                    <td class="emp-tbl__header"><input type="checkbox" id= "" class="" name="" /></td>
+                    <td class="emp-tbl__header"><input type="checkbox" id="" class="" name="" /></td>
                     <td class="emp-tbl__header">이름</td>
                     <td class="emp-tbl__header">직급</td>
                 </tr>
@@ -33,13 +33,13 @@
             <tbody>
                 <tr>
                     <td class="emp-tbl__body">1</td>
-                    <td class="emp-tbl__body"><input type="checkbox" id= "" class="" name="" /></td>
+                    <td class="emp-tbl__body"><input type="checkbox" id="" class="" name="" /></td>
                     <td class="emp-tbl__body">최경원</td>
                     <td class="emp-tbl__body">사원</td>
                 </tr>
                 <tr>
                     <td class="emp-tbl__body">1</td>
-                    <td class="emp-tbl__body"><input type="checkbox" id= "" class="" name="" /></td>
+                    <td class="emp-tbl__body"><input type="checkbox" id="" class="" name="" /></td>
                     <td class="emp-tbl__body">Kristensen Williams Crawshaw</td>
                     <td class="emp-tbl__body">사원</td>
                 </tr>
@@ -72,6 +72,41 @@
 
 <script>
     $(document).ready(function(){
-        GetDepartment();
+        // GetDepartment();
+    var zTreeObj;
+    var zNodes = [];
+    var setting = {
+        check: {
+            enable: false, 
+        },
+        data: {
+            idKey: 'id',
+            pIdKey: 'pId',
+            isParent: 'isParent'
+        }
+    };
+    
+    $.ajax({
+        url : '/Approval/GetDepartment',
+        dataType : 'json',
+        success : function(data){
+            
+            for(var i = 0; i <= data.length - 1; i++){
+                    zNodes[i] = {
+                    id : data[i].code,
+                    name : data[i].name,
+                    isParent : true
+                }
+            }
+            zTreeObj = $.fn.zTree.init($('#EmployeeList'), setting, zNodes);
+        },
+        error : function(){
+            alert("Error");
+        }
+    });
+
+        $('.dept-list').on('click', function(){
+            alert(zTreeObj.getSelectedNodes()[0].id +', '+ zTreeObj.getSelectedNodes()[0].name);
+        });
     });
 </script>
