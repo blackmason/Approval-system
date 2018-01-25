@@ -71,17 +71,17 @@ html, body {
 }
 
 .btn-area {
+  margin: 10px 0;
   display: inline-block;
 }
 
 .dept-area {
   width: 100%;
-  height: 300px;
 }
 
 .dept-list {
   float: left;
-  width: 40%;
+  width: 30%;
   height: 280px;
   border: 1px solid #ccc;
   overflow-y: auto;
@@ -90,47 +90,48 @@ html, body {
 .employee-list {
   display: inline-block;
   margin-left: 10px;
-  width: 58%;
+  width: 68%;
   height: 280px;
   border: 1px solid #ccc;
 }
 
-.empolyees {
+.employees {
   width: 100%;
   border-collapse: collapse;
 }
 
-.empolyees thead {
-  background-color: #e1e1e1;
+.employees thead {
+  background-color: #eee;
 }
 
-.empolyees tr:hover {
+.employees tr:hover {
   background-color: #f1f1f1;
 }
 
-.empolyees td {
+.employees td {
   border: 1px solid #ccc;
   border-top: none;
   text-align: center;
 }
 
-.empolyees td:nth-child(1) {
+.employees td:nth-child(1) {
   width: 30px;
+  border-left: none;
 }
 
-.empolyees td:nth-child(2) {
-  width: 30px;
+.employees td:nth-child(3) {
+  width: 100px;
 }
 
-.empolyees td:nth-child(4) {
-  width: 50px;
+.employees td:nth-child(n) {
+  border-right: none;
 }
 
-.emp-tbl__header {
+.employees__header {
   height: 30px;
 }
 
-.emp-tbl__body {
+.employees__body {
   height: 25px;
 }
 /*# sourceMappingURL=popupStyle_20171215.css.map */
