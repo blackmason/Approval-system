@@ -17,7 +17,7 @@
 }
 .search-area {
     margin: 10px 0;
-    width: 100%;
+    // width: 100%;
     height: 30px;
     // border: 1px solid black; 
 }
@@ -30,6 +30,7 @@
 }
 .keyword-area {
     display: inline-block;
+    width: 300px;
     height: 26px;
     line-height: 26px;
     border: 1px solid #ccc;
@@ -42,7 +43,6 @@
     }
 }
 .btn-area {
-    margin: 10px 0;
     display: inline-block;
 }
 .dept-area {

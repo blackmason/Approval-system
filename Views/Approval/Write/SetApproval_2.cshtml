@@ -13,76 +13,79 @@
         <button class="btn-base btn-cancel">취소</button>
     </div>
 </div>
-
 <div class="dept-area">
-    <!-- 부서 리스트 -->
-    <div class="dept-list">
-        <ul id="deptList" class="ztree"></ul>
+        <!-- 부서 리스트 -->
+        <div class="dept-list">
+            <ul id="deptList" class="ztree"></ul>
+        </div>
+        <!-- 직원 리스트 -->
+        <div class="employee-list">
+            <table class="employees table-list__employees">
+                <thead>
+                    <tr>
+                        <td class="employees__header">#</td>
+                        <td class="employees__header"><input type="checkbox" id="" class="" name="" /></td>
+                        <td class="employees__header">코드</td>
+                        <td class="employees__header">이름</td>
+                        <td class="employees__header">직급</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="employees__body">1</td>
+                        <td class="employees__body"><input type="checkbox" id="" class="" name="" /></td>
+                        <td class="employees__body">99-7594793</td>
+                        <td class="employees__body">최경원</td>
+                        <td class="employees__body">사원</td>
+                    </tr>
+                    <tr>
+                        <td class="employees__body">1</td>
+                        <td class="employees__body"><input type="checkbox" id="" class="" name="" /></td>
+                        <td class="employees__body">99-7594793</td>
+                        <td class="employees__body">Kristensen Williams Craw.</td>
+                        <td class="employees__body">사원</td>
+                    </tr>
+                    <tr>
+                        <td class="employees__body">1</td>
+                        <td class="employees__body"><input type="checkbox" id= "" class="" name="" /></td>
+                        <td class="employees__body">99-7594793</td>
+                        <td class="employees__body">Jason Myers</td>
+                        <td class="employees__body">사원</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <!-- 직원 리스트 -->
-    <div class="employee-list">
-        <table class="employees table-list__employees">
+        
+    <div class="btn-area">
+        <!-- 버튼그룹 마진값 줘야 함!! -->
+        <button class="btn-base">결재자추가</button>
+        <button class="btn-base">참조자추가</button>
+        <button class="btn-base">합의자추가</button>
+    </div>
+    
+    <div class="selected-area">
+        <table class="selected-list">
             <thead>
                 <tr>
-                    <td class="employees__header">#</td>
-                    <td class="employees__header"><input type="checkbox" id="" class="" name="" /></td>
-                    <td class="employees__header">코드</td>
-                    <td class="employees__header">이름</td>
-                    <td class="employees__header">직급</td>
+                    <td class="selected__header">결재유형</td>
+                    <td class="selected__header">결재자</td>
+                    <td class="selected__header">부서명</td>
+                    <td class="selected__header">직급</td>
+                    <td class="selected__header">결재여부</td>
+                    <td class="selected__header">결재날짜</td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td class="employees__body">1</td>
-                    <td class="employees__body"><input type="checkbox" id="" class="" name="" /></td>
-                    <td class="employees__body">99-7594793</td>
-                    <td class="employees__body">최경원</td>
-                    <td class="employees__body">사원</td>
-                </tr>
-                <tr>
-                    <td class="employees__body">1</td>
-                    <td class="employees__body"><input type="checkbox" id="" class="" name="" /></td>
-                    <td class="employees__body">99-7594793</td>
-                    <td class="employees__body">Kristensen Williams Craw.</td>
-                    <td class="employees__body">사원</td>
-                </tr>
-                <tr>
-                    <td class="employees__body">1</td>
-                    <td class="employees__body"><input type="checkbox" id= "" class="" name="" /></td>
-                    <td class="employees__body">99-7594793</td>
-                    <td class="employees__body">Jason Myers</td>
-                    <td class="employees__body">사원</td>
+                    <td class="selected__body"></td>
                 </tr>
             </tbody>
         </table>
     </div>
-</div>
     
-<div class="btn-area">
-    <button class="btn-base">결재자추가</button>
-    <button class="btn-base">참조자추가</button>
-    <button class="btn-base">합의자추가</button>
-</div>
 
-<div class="selected-area">
-    <table class="selected-list">
-        <thead>
-            <tr>
-                <td class="selected__header">결재유형</td>
-                <td class="selected__header">결재자</td>
-                <td class="selected__header">부서명</td>
-                <td class="selected__header">직급</td>
-                <td class="selected__header">결재여부</td>
-                <td class="selected__header">결재날짜</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="selected__body"></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+
 
 <script>
     $(document).ready(function(){
